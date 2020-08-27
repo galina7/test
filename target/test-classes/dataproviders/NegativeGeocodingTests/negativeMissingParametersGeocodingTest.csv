@@ -1,0 +1,5 @@
+no,json,statusCode,status,errorMessage,description
+1,json?address=1600+Amphitheatre+Parkway+Mountain+View+CA,200,REQUEST_DENIED,You must use an API key to authenticate each request to Google Maps Platform APIs,missing key test
+2,json?address=1600+Amphitheatre+Parkway+Mountain+View+CA&key=5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0,200,REQUEST_DENIED,The provided API key is invalid.,invalid key test
+3,json?key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0,400,INVALID_REQUEST,Invalid request. Missing the 'address',missing address test
+4,json?address1600+Amphitheatre+Parkway+Mountain+View+CA&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0,400,INVALID_REQUEST,Invalid request. Missing the 'address',invalid address format test

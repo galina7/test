@@ -1,0 +1,3 @@
+no,json,statusCode,status,location_type,description
+1,json?address=CA&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0,200,OK,[APPROXIMATE],address contains only state
+2,json?address=East+El+Camino+Real&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0,200,OK,GEOMETRIC_CENTER,address doesn't contain city or state test

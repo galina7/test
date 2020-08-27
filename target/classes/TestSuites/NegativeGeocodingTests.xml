@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeGeocodingSuite" verbose="1" parallel="tests" thread-count="4">
+
+	
+	<test name="NegativeTests-CH">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.googleapi.maps.NegativeGeocodingTests">
+			</class>
+		</classes>
+	</test>
+
+</suite>
