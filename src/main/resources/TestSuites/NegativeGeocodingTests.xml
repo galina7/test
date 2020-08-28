@@ -6,7 +6,7 @@
 	<test name="NegativeTests-CH">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.googleapi.maps.NegativeGeocodingTests">
+			<class name="geocoding_tests.NegativeGeocodingTests">
 			</class>
 		</classes>
 	</test>

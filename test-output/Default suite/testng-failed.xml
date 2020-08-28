@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.googleapi.maps.NegativeGeocodingTests">
+      <class name="geocoding_tests.NegativeGeocodingTests">
         <methods>
           <include name="setUP"/>
-          <include name="getGeocodingWithMissingAddressComponentsTest"/>
+          <include name="getGeocodingWithNotExistedAddressTest"/>
         </methods>
-      </class> <!-- com.googleapi.maps.NegativeGeocodingTests -->
+      </class> <!-- geocoding_tests.NegativeGeocodingTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

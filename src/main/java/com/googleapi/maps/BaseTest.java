@@ -13,14 +13,14 @@ import io.restassured.specification.RequestSpecification;
 public class BaseTest {
 
 	protected Logger log;
-	protected RequestSpecification spec;
+	protected RequestSpecification baseURL;
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setUP( ITestContext ctx) {
 		String testName = ctx.getCurrentXmlTest().getName();
 		log = LogManager.getLogger(testName);
 
-		spec = new RequestSpecBuilder().setBaseUri("https://maps.googleapis.com/maps/api/geocode/").build();
+		baseURL = new RequestSpecBuilder().setBaseUri("https://maps.googleapis.com").build();
 	}
 
 }

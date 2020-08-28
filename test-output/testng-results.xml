@@ -2,27 +2,27 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-26T20:16:03 PDT" name="Default suite" finished-at="2020-08-26T20:16:05 PDT" duration-ms="2589">
+  <suite started-at="2020-08-27T23:55:39 PDT" name="Default suite" finished-at="2020-08-27T23:55:47 PDT" duration-ms="8382">
     <groups>
     </groups>
-    <test started-at="2020-08-26T20:16:03 PDT" name="Default test" finished-at="2020-08-26T20:16:05 PDT" duration-ms="2589">
-      <class name="com.googleapi.maps.NegativeGeocodingTests">
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:com.googleapi.maps.NegativeGeocodingTests@57250572]" started-at="2020-08-26T20:16:03 PDT" name="setUP" finished-at="2020-08-26T20:16:03 PDT" duration-ms="407" status="PASS">
+    <test started-at="2020-08-27T23:55:39 PDT" name="Default test" finished-at="2020-08-27T23:55:47 PDT" duration-ms="8382">
+      <class name="geocoding_tests.NegativeGeocodingTests">
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@1018bde2]" started-at="2020-08-27T23:55:39 PDT" name="setUP" finished-at="2020-08-27T23:55:40 PDT" duration-ms="542" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5cff6b74]]>
+                <![CDATA[org.testng.TestRunner@58324c9f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="getGeocodingWithNotExistedAddressTest()[pri:0, instance:com.googleapi.maps.NegativeGeocodingTests@57250572]" started-at="2020-08-26T20:16:03 PDT" name="getGeocodingWithNotExistedAddressTest" finished-at="2020-08-26T20:16:05 PDT" duration-ms="1788" status="PASS">
+        <test-method signature="getGeocodingWithNotExistedAddressTest()[pri:0, instance:geocoding_tests.NegativeGeocodingTests@1018bde2]" started-at="2020-08-27T23:55:40 PDT" name="getGeocodingWithNotExistedAddressTest" finished-at="2020-08-27T23:55:47 PDT" duration-ms="7376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getGeocodingWithNotExistedAddressTest -->
-      </class> <!-- com.googleapi.maps.NegativeGeocodingTests -->
+      </class> <!-- geocoding_tests.NegativeGeocodingTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
