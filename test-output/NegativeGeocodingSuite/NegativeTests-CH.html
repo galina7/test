@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>NegativeTests-CH</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 26 21:50:19 PDT 2020</td>
+<td>Started on:</td><td>Fri Aug 28 09:20:00 PDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4735 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4449 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,56 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest()'><b>getGeocodingWithMissingAddressComponentsTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=2, json=json?address=East+El+Camino+Real&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, description=address doesn't contain city or state test, location_type=GEOMETRIC_CENTER, statusCode=200, status=OK}</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	location type is not as expected expected [GEOMETRIC_CENTER] but found [[GEOMETRIC_CENTER, GEOMETRIC_CENTER]]
-	at geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest(NegativeGeocodingTests.java:87)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace599383106", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace599383106'><pre>java.lang.AssertionError: The following asserts failed:
-	location type is not as expected expected [GEOMETRIC_CENTER] but found [[GEOMETRIC_CENTER, GEOMETRIC_CENTER]]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
-	at geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest(NegativeGeocodingTests.java:87)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</pre></div></td>
-<td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -125,35 +75,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest()'><b>getGeocodingWithMissingAddressComponentsTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=1, json=json?address=CA&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, description=address contains only state, location_type=[APPROXIMATE], statusCode=200, status=OK}</td>
+<td title='geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest()'><b>getGeocodingWithMissingAddressComponentsTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=1, address=CA, description=address contains only state, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, location_type=APPROXIMATE, statusCode=200, status=OK}</td>
 <td></td>
 <td>1</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
+<td>geocoding_tests.NegativeGeocodingTests@37f1104d</td></tr>
+<tr>
+<td title='geocoding_tests.NegativeGeocodingTests.getGeocodingWithMissingAddressComponentsTest()'><b>getGeocodingWithMissingAddressComponentsTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=2, address=East El Camino Real, description=address doesn't contain city or state test, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, location_type=GEOMETRIC_CENTER, statusCode=200, status=OK}</td>
+<td></td>
+<td>0</td>
+<td>geocoding_tests.NegativeGeocodingTests@37f1104d</td></tr>
 <tr>
 <td title='geocoding_tests.NegativeGeocodingTests.getGeocodingWithNotExistedAddressTest()'><b>getGeocodingWithNotExistedAddressTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests</td>
 <td></td>
 <td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
+<td>geocoding_tests.NegativeGeocodingTests@37f1104d</td></tr>
 <tr>
-<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=1, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs, json=json?address=1600+Amphitheatre+Parkway+Mountain+View+CA, description=missing key test, statusCode=200, status=REQUEST_DENIED}</td>
+<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=1, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account, description=missing key test, key=, statusCode=200, status=REQUEST_DENIED}</td>
 <td></td>
 <td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
+<td>geocoding_tests.NegativeGeocodingTests@37f1104d</td></tr>
 <tr>
-<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=2, errorMessage=The provided API key is invalid., json=json?address=1600+Amphitheatre+Parkway+Mountain+View+CA&key=5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, description=invalid key test, statusCode=200, status=REQUEST_DENIED}</td>
+<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=2, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=The provided API key is invalid., description=invalid key test, key=5o3ClJEaUAprrk2H-3tQY8vkXbC0, statusCode=200, status=REQUEST_DENIED}</td>
 <td></td>
 <td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
-<tr>
-<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=3, errorMessage=Invalid request. Missing the 'address', json=json?key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, description=missing address test, statusCode=400, status=INVALID_REQUEST}</td>
-<td></td>
-<td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
-<tr>
-<td title='geocoding_tests.NegativeGeocodingTests.negativeMissingParametersGeocodingTest()'><b>negativeMissingParametersGeocodingTest</b><br>Test class: geocoding_tests.NegativeGeocodingTests<br>Parameters: {no=4, errorMessage=Invalid request. Missing the 'address', json=json?address1600+Amphitheatre+Parkway+Mountain+View+CA&key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, description=invalid address format test, statusCode=400, status=INVALID_REQUEST}</td>
-<td></td>
-<td>0</td>
-<td>geocoding_tests.NegativeGeocodingTests@175b9425</td></tr>
+<td>geocoding_tests.NegativeGeocodingTests@37f1104d</td></tr>
 </table><p>
 </body>
 </html>

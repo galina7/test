@@ -1,28 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-27T23:55:39 PDT" name="Default suite" finished-at="2020-08-27T23:55:47 PDT" duration-ms="8382">
+  <suite started-at="2020-08-28T09:20:00 PDT" name="NegativeGeocodingSuite" finished-at="2020-08-28T09:20:04 PDT" duration-ms="4449">
     <groups>
     </groups>
-    <test started-at="2020-08-27T23:55:39 PDT" name="Default test" finished-at="2020-08-27T23:55:47 PDT" duration-ms="8382">
+    <test started-at="2020-08-28T09:20:00 PDT" name="NegativeTests-CH" finished-at="2020-08-28T09:20:04 PDT" duration-ms="4449">
       <class name="geocoding_tests.NegativeGeocodingTests">
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@1018bde2]" started-at="2020-08-27T23:55:39 PDT" name="setUP" finished-at="2020-08-27T23:55:40 PDT" duration-ms="542" status="PASS">
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:00 PDT" name="setUP" finished-at="2020-08-28T09:20:01 PDT" duration-ms="451" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58324c9f]]>
+                <![CDATA[org.testng.TestRunner@14555e0a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="getGeocodingWithNotExistedAddressTest()[pri:0, instance:geocoding_tests.NegativeGeocodingTests@1018bde2]" started-at="2020-08-27T23:55:40 PDT" name="getGeocodingWithNotExistedAddressTest" finished-at="2020-08-27T23:55:47 PDT" duration-ms="7376" status="PASS">
+        <test-method signature="getGeocodingWithMissingAddressComponentsTest(java.util.Map)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:01 PDT" name="getGeocodingWithMissingAddressComponentsTest" data-provider="csvReader" finished-at="2020-08-28T09:20:02 PDT" duration-ms="1448" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, address=CA, description=address contains only state, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, location_type=APPROXIMATE, statusCode=200, status=OK}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGeocodingWithMissingAddressComponentsTest -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:02 PDT" name="setUP" finished-at="2020-08-28T09:20:02 PDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@14555e0a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="getGeocodingWithMissingAddressComponentsTest(java.util.Map)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:02 PDT" name="getGeocodingWithMissingAddressComponentsTest" data-provider="csvReader" finished-at="2020-08-28T09:20:03 PDT" duration-ms="883" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, address=East El Camino Real, description=address doesn't contain city or state test, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, location_type=GEOMETRIC_CENTER, statusCode=200, status=OK}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGeocodingWithMissingAddressComponentsTest -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:03 PDT" name="setUP" finished-at="2020-08-28T09:20:03 PDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@14555e0a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="getGeocodingWithNotExistedAddressTest()[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:03 PDT" name="getGeocodingWithNotExistedAddressTest" finished-at="2020-08-28T09:20:04 PDT" duration-ms="715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getGeocodingWithNotExistedAddressTest -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:04 PDT" name="setUP" finished-at="2020-08-28T09:20:04 PDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@14555e0a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="negativeMissingParametersGeocodingTest(java.util.Map)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:04 PDT" name="negativeMissingParametersGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T09:20:04 PDT" duration-ms="168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=1, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account, description=missing key test, key=, statusCode=200, status=REQUEST_DENIED}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeMissingParametersGeocodingTest -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:04 PDT" name="setUP" finished-at="2020-08-28T09:20:04 PDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@14555e0a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="negativeMissingParametersGeocodingTest(java.util.Map)[pri:0, instance:geocoding_tests.NegativeGeocodingTests@37f1104d]" started-at="2020-08-28T09:20:04 PDT" name="negativeMissingParametersGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T09:20:04 PDT" duration-ms="158" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{no=2, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=The provided API key is invalid., description=invalid key test, key=5o3ClJEaUAprrk2H-3tQY8vkXbC0, statusCode=200, status=REQUEST_DENIED}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeMissingParametersGeocodingTest -->
       </class> <!-- geocoding_tests.NegativeGeocodingTests -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- NegativeTests-CH -->
+  </suite> <!-- NegativeGeocodingSuite -->
 </testng-results>
