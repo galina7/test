@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeReverseGeocodingSuite" verbose="1" parallel="tests" thread-count="4">
+
+	
+	<test name="NegativeTests ReverseGeocoding">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="reverse_geocoding_tests.NegativeReverseGeocodingTests">
+			</class>
+		</classes>
+	</test>
+
+</suite>

@@ -19,20 +19,25 @@ import io.restassured.response.Response;
 
 public class NegativeGeocodingTests extends BaseTest {
 
+	/*************************************************************
+	 * Method - Method is testing NEGATIVE scenarios for Geocoding
+	 * - Scenario1: missing key test
+	 * - Scenario2: invalid key test
+	 *************************************************************/
 	@Test(dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
-	public void negativeMissingParametersGeocodingTest(Map<String, String> testData) {
+	public void negativeInvalidKeyParametersGeocodingTest(Map<String, String> testData) {
 		
 		// Create data object with test parameters
 		TestDataClass dataObject = new TestDataClass(testData);
 				
 		log.info("Starting negative Geocoding Test #" + dataObject.getTestNumber() + " for " + dataObject.getDescription());
 				
-		// constructing geocoding URL with test parameters
+		// executing request with the test parameters
 		Response response = RestAssured.given(baseURL).pathParam("outputFormat", "json")
 			.queryParam("address", dataObject.getAddress())
 			.queryParam("key", dataObject.getKey())
 			.when()
-			.get("/maps/api/geocode/{outputFormat}");
+			.get(constanValues.GEOCODE_API + "{outputFormat}");
 				
 		//verify response code and status
 		response.then().assertThat().statusCode(HttpStatus.SC_OK)
@@ -40,8 +45,14 @@ public class NegativeGeocodingTests extends BaseTest {
 			.body("error_message", equalTo(dataObject.getExpectedErrorMessage()));
 	}
 
+	
+	/****************************************************************
+	 * Method - Method is testing NEGATIVE scenarios for  Geocoding
+	 * - Scenario1: address contains only state (no street, city data)
+	 * - Scenario2: address contains only street (no city, state data)
+	 ****************************************************************/
 	@Test(dataProvider = "csvReader", dataProviderClass = CsvDataProviders.class)
-	public void getGeocodingWithMissingAddressComponentsTest(Map<String, String> testData) {
+	public void negativeInvalidAddressParametersGeocodingTest(Map<String, String> testData) {
 		
 		// Create data object with test parameters
 		TestDataClass dataObject = new TestDataClass(testData);
@@ -59,7 +70,12 @@ public class NegativeGeocodingTests extends BaseTest {
 			.body("status", equalTo(dataObject.getExpectedStatus()))
 			.body("results[0].geometry.location_type", equalTo(dataObject.getExpectedLocation_Type()));
 	}
-
+	
+	
+	/****************************************************************
+	 * Method - Method is testing NEGATIVE scenarios for  Geocoding
+	 * - Scenario1: non existed address - zero results
+	 ****************************************************************/
 	@Test
 	public void getGeocodingWithNotExistedAddressTest() {
 		// get response with non existing address

@@ -3,7 +3,7 @@
 <suite name="NegativeGeocodingSuite" verbose="1" parallel="tests" thread-count="4">
 
 	
-	<test name="NegativeTests-CH">
+	<test name="NegativeTests Geocoding">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="geocoding_tests.NegativeGeocodingTests">

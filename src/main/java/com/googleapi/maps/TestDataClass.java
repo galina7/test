@@ -2,26 +2,30 @@ package com.googleapi.maps;
 
 import java.util.Map;
 
+import org.hamcrest.Matcher;
+
 public class TestDataClass {
 
 	private Object testNumber;
 	private Object address;
-	private Object expectedCode;
+	private int expectedCode;
 	private Object expectedStatus;
 	private String expectedLocation_Type;
 	private Object description;
 	private String expectedErrorMessage;
 	private String key;
+	private String latlng;
 
 	public TestDataClass(Map<String, String> testData) {
 		testNumber = getMapValue(testData, "no");
 		address = getMapValue(testData, "address");
-		expectedCode = getMapValue(testData, "statusCode");
+		expectedCode = Integer.parseInt(testData.get("statusCode"));
 		expectedStatus = getMapValue(testData, "status");
 		expectedLocation_Type = getMapValue(testData,"location_type");
 		description = getMapValue(testData, "description");
 		expectedErrorMessage = getMapValue(testData,"errorMessage");
 		key = getMapValue(testData,"key");
+		latlng = getMapValue(testData,"latlng");
 	}
 	
 	private String getMapValue(Map<String, String> testData, String key) {
@@ -48,11 +52,11 @@ public class TestDataClass {
 		this.address = address;
 	}
 
-	protected Object getExpectedCode() {
+	public int getExpectedCode() {
 		return expectedCode;
 	}
 
-	public void setExpectedCode(String expectedCode) {
+	public void setExpectedCode(int expectedCode) {
 		this.expectedCode = expectedCode;
 	}
 
@@ -94,6 +98,14 @@ public class TestDataClass {
 
 	public void setKey(String key) {
 		this.key = key;
+	}
+
+	public String getLatlng() {
+		return latlng;
+	}
+
+	public void setLatlng(String latlng) {
+		this.latlng = latlng;
 	}
 	
 	

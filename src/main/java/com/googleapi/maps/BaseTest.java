@@ -14,12 +14,13 @@ public class BaseTest {
 
 	protected Logger log;
 	protected RequestSpecification baseURL;
+	protected ConstantValues constanValues;
 	
 	@BeforeMethod(alwaysRun = true)
 	public void setUP( ITestContext ctx) {
 		String testName = ctx.getCurrentXmlTest().getName();
 		log = LogManager.getLogger(testName);
-
+		constanValues = new ConstantValues();
 		baseURL = new RequestSpecBuilder().setBaseUri("https://maps.googleapis.com").build();
 	}
 

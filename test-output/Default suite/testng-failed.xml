@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="geocoding_tests.NegativeGeocodingTests">
+      <class name="reverse_geocoding_tests.PositiveReverseGeocodingTests">
         <methods>
           <include name="setUP"/>
-          <include name="getGeocodingWithNotExistedAddressTest"/>
+          <include name="positiveReverseTest"/>
         </methods>
-      </class> <!-- geocoding_tests.NegativeGeocodingTests -->
+      </class> <!-- reverse_geocoding_tests.PositiveReverseGeocodingTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
