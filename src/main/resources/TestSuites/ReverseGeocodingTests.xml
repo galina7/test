@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ReverseGeocodingTestSuite" verbose="1">
+
+	
+	<test name="ReverseGeocoding Tests">
+
+		<classes>
+			<class name="reverse_geocoding_tests.ReverseGeocodingTests">
+			</class>
+		</classes>
+	</test>
+
+</suite>

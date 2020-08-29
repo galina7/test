@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GeocodingTestSuite" verbose="1">
+
+	
+	<test name="Geocoding Tests">
+
+		<classes>
+			<class name="geocoding_tests.GeocodingTests">
+			</class>
+		</classes>
+	</test>
+
+</suite>

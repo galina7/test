@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionTestSuite" verbose="1" parallel="classes" thread-count="2">
+
+
+	<test name="Regression Tests">
+
+		<classes>
+
+			<class name="geocoding_tests.GeocodingTests">
+			</class>
+
+			<class name="reverse_geocoding_tests.ReverseGeocodingTests">
+			</class>
+
+		</classes>
+	</test>
+
+</suite>

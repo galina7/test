@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>TestNG:  ReverseGeocoding Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ReverseGeocoding Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 28 17:40:50 PDT 2020</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3606 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='reverse_geocoding_tests.ReverseGeocodingTests.negativeReverseGeocodingTest()'><b>negativeReverseGeocodingTest</b><br>Test class: reverse_geocoding_tests.ReverseGeocodingTests<br>Parameters: {no=1, errorMessage=Invalid request. Invalid 'latlng' parameter., description=invalid characters in latlng parameter, latlng=%$, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, statusCode=400, status=INVALID_REQUEST}</td>
+<td></td>
+<td>1</td>
+<td>reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6</td></tr>
+<tr>
+<td title='reverse_geocoding_tests.ReverseGeocodingTests.negativeReverseGeocodingTest()'><b>negativeReverseGeocodingTest</b><br>Test class: reverse_geocoding_tests.ReverseGeocodingTests<br>Parameters: {no=2, errorMessage=Invalid request. Missing the 'address', 'components', 'latlng' or 'place_id' parameter., description=missing latlng parameter, latlng=, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, statusCode=400, status=INVALID_REQUEST}</td>
+<td></td>
+<td>0</td>
+<td>reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6</td></tr>
+<tr>
+<td title='reverse_geocoding_tests.ReverseGeocodingTests.negativeReverseGeocodingTest()'><b>negativeReverseGeocodingTest</b><br>Test class: reverse_geocoding_tests.ReverseGeocodingTests<br>Parameters: {no=3, errorMessage=The provided API key is invalid., description=invalid key parameter, latlng=37.3729901802915,-122.0378542197085, key=AIzaSyD3ClJ3ySEaUApH-3tQY8vkXbC0, statusCode=200, status=REQUEST_DENIED}</td>
+<td></td>
+<td>0</td>
+<td>reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6</td></tr>
+<tr>
+<td title='reverse_geocoding_tests.ReverseGeocodingTests.negativeReverseGeocodingTest()'><b>negativeReverseGeocodingTest</b><br>Test class: reverse_geocoding_tests.ReverseGeocodingTests<br>Parameters: {no=4, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account, description=missing key parameter, latlng=7.3729901802915,-122.0378542197085, key=, statusCode=200, status=REQUEST_DENIED}</td>
+<td></td>
+<td>0</td>
+<td>reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6</td></tr>
+<tr>
+<td title='reverse_geocoding_tests.ReverseGeocodingTests.positiveReverseTest()'><b>positiveReverseTest</b><br>Test class: reverse_geocoding_tests.ReverseGeocodingTests</td>
+<td></td>
+<td>0</td>
+<td>reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6</td></tr>
+</table><p>
+</body>
+</html>

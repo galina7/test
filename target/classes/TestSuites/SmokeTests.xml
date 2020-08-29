@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SmokeTestSuite" verbose="1" parallel="methods" thread-count="3">
+
+
+	<test name="Smoke Tests">
+		<classes>
+
+			<class name="geocoding_tests.GeocodingTests">
+				<methods>
+					<include name="positiveTest" />
+					<include name="negativeInvalidKeyParametersGeocodingTest" />
+				</methods>
+			</class>
+
+			<class name="reverse_geocoding_tests.ReverseGeocodingTests">
+				<methods>
+					<include name="positiveReverseTest" />
+				</methods>
+			</class>
+
+
+
+		</classes>
+
+	</test>
+
+</suite>
