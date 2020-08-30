@@ -9,12 +9,11 @@ import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.googleapi.maps.BaseTest;
+import com.googleapi.maps.ConstantValues;
 import com.googleapi.maps.CsvDataProviders;
 import com.googleapi.maps.TestDataClass;
 import com.googleapi.maps.Utilities;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class ReverseGeocodingTests extends Utilities {
@@ -30,11 +29,11 @@ public class ReverseGeocodingTests extends Utilities {
 		log.info("Positive test for Reverse Geocoding");
 		
 		// executing request with the test parameters
-		Response response = getResponse(constanValues.LATLNG,  constanValues.KEY, constanValues.GEOCODE_API, constanValues.REVERSE_GEOCODING);
+		Response response = getResponse(ConstantValues.LATLNG,  ConstantValues.KEY, ConstantValues.GEOCODE_API, ConstantValues.REVERSE_GEOCODING);
 
 		//verify response code and status
 		response.then().assertThat().statusCode(HttpStatus.SC_OK)
-				.body("status", equalTo(constanValues.STATUS_VALUE));
+				.body("status", equalTo(ConstantValues.STATUS_VALUE));
 
 		// verify response fields
 		SoftAssert sf = new SoftAssert();
@@ -44,12 +43,12 @@ public class ReverseGeocodingTests extends Utilities {
 		sf.assertFalse(results.isEmpty(), "got an empty results");
 
 		// verify formatted address field in response
-		String formatted_address = response.jsonPath().getString(constanValues.FORMATTED_ADDRESS);
-		sf.assertTrue(formatted_address.contains(constanValues.FORMATTED_ADDRESS_FOR_REVERSE_VALUE), "formatted address is not as expected");
+		String formatted_address = response.jsonPath().getString(ConstantValues.FORMATTED_ADDRESS);
+		sf.assertTrue(formatted_address.contains(ConstantValues.FORMATTED_ADDRESS_FOR_REVERSE_VALUE), "formatted address is not as expected");
 
 		// verify place_id field in response
-		String place_id = response.jsonPath().getString(constanValues.PLACE_ID);
-		sf.assertTrue(place_id.contains(constanValues.PLACE_ID_VALUE), "place_id address is not as expected");
+		String place_id = response.jsonPath().getString(ConstantValues.PLACE_ID);
+		sf.assertTrue(place_id.contains(ConstantValues.PLACE_ID_VALUE), "place_id address is not as expected");
 
 		sf.assertAll();
 
@@ -79,7 +78,7 @@ public class ReverseGeocodingTests extends Utilities {
 		log.info("Starting negative Geocoding Test #" + dataObject.getTestNumber() + " for " + dataObject.getDescription());
 		
 		// executing request with the test parameters
-		Response response = getResponse(dataObject.getLatlng().toString(), dataObject.getKey().toString(), constanValues.GEOCODE_API, constanValues.REVERSE_GEOCODING);
+		Response response = getResponse(dataObject.getLatlng().toString(), dataObject.getKey().toString(), ConstantValues.GEOCODE_API, ConstantValues.REVERSE_GEOCODING);
 		
 		//print response's status and error message values
 		log.info("***status value: " + response.jsonPath().getString("status"));

@@ -2,22 +2,18 @@ package geocoding_tests;
 
 import static org.hamcrest.Matchers.equalTo;
 
-import java.io.File;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.http.HttpStatus;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.googleapi.maps.BaseTest;
+import com.googleapi.maps.ConstantValues;
 import com.googleapi.maps.CsvDataProviders;
 import com.googleapi.maps.TestDataClass;
 import com.googleapi.maps.Utilities;
 
-import io.restassured.RestAssured;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class GeocodingTests extends Utilities {
@@ -33,11 +29,11 @@ public class GeocodingTests extends Utilities {
 		log.info("Positive test for Geocoding");
 
 		// executing request with the test parameters
-		Response response = getResponse(constanValues.ADDRESS, constanValues.KEY, constanValues.GEOCODE_API, constanValues.GEOCODING);
+		Response response = getResponse(ConstantValues.ADDRESS, ConstantValues.KEY, ConstantValues.GEOCODE_API, ConstantValues.GEOCODING);
 		
 		//verify response code and status
 		response.then().assertThat().statusCode(HttpStatus.SC_OK)
-				.body("status", equalTo(constanValues.STATUS_VALUE));
+				.body("status", equalTo(ConstantValues.STATUS_VALUE));
 
 		// create SoftAssert object for response verification
 		SoftAssert sf = new SoftAssert();
@@ -47,18 +43,18 @@ public class GeocodingTests extends Utilities {
 		sf.assertFalse(results.isEmpty(), "got an empty results");
 		
 		// verify formatted address is present in response and has expected value
-		String formatted_address = response.jsonPath().getString(constanValues.FORMATTED_ADDRESS);
-		sf.assertEquals(formatted_address, constanValues.FORMATTED_ADDRESS_VALUE, "formatted_address is incorrect");
+		String formatted_address = response.jsonPath().getString(ConstantValues.FORMATTED_ADDRESS);
+		sf.assertEquals(formatted_address, ConstantValues.FORMATTED_ADDRESS_VALUE, "formatted_address is incorrect");
 
 		// verify location latitude is present and has expected value
-		String latStr = response.jsonPath().getString(constanValues.LOCATION_LAT);
+		String latStr = response.jsonPath().getString(ConstantValues.LOCATION_LAT);
 		int lat = Integer.parseInt(latStr.substring(1, latStr.indexOf(".")));
-		sf.assertEquals(lat, constanValues.LOCATION_LAT_VALUE, "location latitude is not as expected");
+		sf.assertEquals(lat, ConstantValues.LOCATION_LAT_VALUE, "location latitude is not as expected");
 
 		// verify location longitude is present and has expected value
-		String lngStr = response.jsonPath().getString(constanValues.LOCATION_LNG);
+		String lngStr = response.jsonPath().getString(ConstantValues.LOCATION_LNG);
 		int lng = Integer.parseInt(lngStr.substring(1, lngStr.indexOf(".")));
-		sf.assertEquals(lng, constanValues.LOCATION_LNG_VALUE, "location longitude is not as expected");
+		sf.assertEquals(lng, ConstantValues.LOCATION_LNG_VALUE, "location longitude is not as expected");
 		
 		//print response's formatted_address, location latitude and longitude values
 		log.info("***formatted_address : " + formatted_address);
@@ -85,7 +81,7 @@ public class GeocodingTests extends Utilities {
 		log.info("Starting negative Geocoding Test #" + dataObject.getTestNumber() + " for " + dataObject.getDescription());
 				
 		// executing request with the test parameters
-		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), constanValues.GEOCODE_API, constanValues.GEOCODING);
+		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), ConstantValues.GEOCODE_API, ConstantValues.GEOCODING);
 		
 		//print response's status and error message values
 		log.info("***status value: " + response.jsonPath().getString(dataObject.getStatus_path()));
@@ -116,16 +112,16 @@ public class GeocodingTests extends Utilities {
 		log.info("Starting negative Geocoding Test #" + dataObject.getTestNumber() + " for " + dataObject.getDescription());
 		
 		// executing request with the test parameters
-		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), constanValues.GEOCODE_API, constanValues.GEOCODING);
+		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), ConstantValues.GEOCODE_API, ConstantValues.GEOCODING);
 		
 		//print response's status and location_type values
-		log.info("***status value: " + response.jsonPath().getString(constanValues.STATUS));
-		log.info("***location_type value: " + response.jsonPath().getString(constanValues.LOCATION_TYPE));
+		log.info("***status value: " + response.jsonPath().getString(ConstantValues.STATUS));
+		log.info("***location_type value: " + response.jsonPath().getString(ConstantValues.LOCATION_TYPE));
 		
 		//verify response status's code, api status and location type
 		response.then().assertThat().statusCode(HttpStatus.SC_OK)
-			.body(constanValues.STATUS, equalTo(dataObject.getExpectedStatus()))
-			.body(constanValues.LOCATION_TYPE, equalTo(dataObject.getExpectedLocation_Type()));
+			.body(ConstantValues.STATUS, equalTo(dataObject.getExpectedStatus()))
+			.body(ConstantValues.LOCATION_TYPE, equalTo(dataObject.getExpectedLocation_Type()));
 	}
 	
 	
@@ -143,19 +139,19 @@ public class GeocodingTests extends Utilities {
 		log.info("Starting empty Results Geocoding Test #" + dataObject.getTestNumber() + " for " + dataObject.getDescription());
 
 		// executing request with the test parameters
-		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), constanValues.GEOCODE_API, constanValues.GEOCODING);
+		Response response = getResponse(dataObject.getAddress().toString(),  dataObject.getKey().toString(), ConstantValues.GEOCODE_API, ConstantValues.GEOCODING);
 
 		//verify response code and status
 		response.then().assertThat().statusCode(HttpStatus.SC_OK)
-				.body(constanValues.STATUS, equalTo(dataObject.getExpectedStatus()));
+				.body(ConstantValues.STATUS, equalTo(dataObject.getExpectedStatus()));
 
 		// verify response array has 0 elements
 		SoftAssert sf = new SoftAssert();
-		List<Integer> results = response.jsonPath().getList(constanValues.RESULTS);
+		List<Integer> results = response.jsonPath().getList(ConstantValues.RESULTS);
 		sf.assertTrue(results.isEmpty(), "got an empty results");
 		
 		//print response's status and result array size
-		log.info("***status value: " + response.jsonPath().getString(constanValues.STATUS));
+		log.info("***status value: " + response.jsonPath().getString(ConstantValues.STATUS));
 		log.info("***results array size: " + results.size());
 
 		sf.assertAll();
