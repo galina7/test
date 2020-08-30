@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="tests" name="Failed suite [NegativeGeocodingSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="4" parallel="tests" name="NegativeTests Geocoding(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="geocoding_tests.GeocodingTests">
+      <class name="reverse_geocoding_tests.ReverseGeocodingTests">
         <methods>
-          <include name="negativeInvalidAddressParametersGeocodingTest"/>
-          <include name="negativeInvalidKeyParametersGeocodingTest"/>
           <include name="setUP"/>
+          <include name="positiveReverseTest"/>
         </methods>
-      </class> <!-- geocoding_tests.GeocodingTests -->
+      </class> <!-- reverse_geocoding_tests.ReverseGeocodingTests -->
     </classes>
-  </test> <!-- NegativeTests Geocoding(failed) -->
-</suite> <!-- Failed suite [NegativeGeocodingSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,116 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="3" total="7" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-28T17:40:50 PDT" name="ReverseGeocodingTestSuite" finished-at="2020-08-28T17:40:54 PDT" duration-ms="3606">
+  <suite started-at="2020-08-29T23:34:12 PDT" name="SmokeTestSuite" finished-at="2020-08-29T23:34:16 PDT" duration-ms="3890">
     <groups>
     </groups>
-    <test started-at="2020-08-28T17:40:50 PDT" name="ReverseGeocoding Tests" finished-at="2020-08-28T17:40:54 PDT" duration-ms="3606">
+    <test started-at="2020-08-29T23:34:12 PDT" name="Smoke Tests" finished-at="2020-08-29T23:34:16 PDT" duration-ms="3890">
       <class name="reverse_geocoding_tests.ReverseGeocodingTests">
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:51 PDT" name="setUP" finished-at="2020-08-28T17:40:51 PDT" duration-ms="411" status="PASS">
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@6bf0219d]" started-at="2020-08-29T23:34:13 PDT" name="setUP" finished-at="2020-08-29T23:34:14 PDT" duration-ms="661" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@44598ef7]]>
+                <![CDATA[org.testng.TestRunner@6111ba37]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="negativeReverseGeocodingTest(java.util.Map)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:51 PDT" name="negativeReverseGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T17:40:53 PDT" duration-ms="1624" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=1, errorMessage=Invalid request. Invalid 'latlng' parameter., description=invalid characters in latlng parameter, latlng=%$, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, statusCode=400, status=INVALID_REQUEST}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeReverseGeocodingTest -->
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="setUP" finished-at="2020-08-28T17:40:53 PDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@44598ef7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="negativeReverseGeocodingTest(java.util.Map)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="negativeReverseGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T17:40:53 PDT" duration-ms="158" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=2, errorMessage=Invalid request. Missing the 'address', 'components', 'latlng' or 'place_id' parameter., description=missing latlng parameter, latlng=, key=AIzaSyDt5o3ClJ3ySEaUAprrk2H-3tQY8vkXbC0, statusCode=400, status=INVALID_REQUEST}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeReverseGeocodingTest -->
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="setUP" finished-at="2020-08-28T17:40:53 PDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@44598ef7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="negativeReverseGeocodingTest(java.util.Map)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="negativeReverseGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T17:40:53 PDT" duration-ms="163" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=3, errorMessage=The provided API key is invalid., description=invalid key parameter, latlng=37.3729901802915,-122.0378542197085, key=AIzaSyD3ClJ3ySEaUApH-3tQY8vkXbC0, statusCode=200, status=REQUEST_DENIED}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeReverseGeocodingTest -->
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="setUP" finished-at="2020-08-28T17:40:53 PDT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@44598ef7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="negativeReverseGeocodingTest(java.util.Map)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="negativeReverseGeocodingTest" data-provider="csvReader" finished-at="2020-08-28T17:40:53 PDT" duration-ms="183" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{no=4, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account, description=missing key parameter, latlng=7.3729901802915,-122.0378542197085, key=, statusCode=200, status=REQUEST_DENIED}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- negativeReverseGeocodingTest -->
-        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="setUP" finished-at="2020-08-28T17:40:53 PDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@44598ef7]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="positiveReverseTest()[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@4470f8a6]" started-at="2020-08-28T17:40:53 PDT" name="positiveReverseTest" finished-at="2020-08-28T17:40:54 PDT" duration-ms="366" status="PASS">
+        <test-method signature="positiveReverseTest()[pri:0, instance:reverse_geocoding_tests.ReverseGeocodingTests@6bf0219d]" started-at="2020-08-29T23:34:14 PDT" name="positiveReverseTest" finished-at="2020-08-29T23:34:16 PDT" duration-ms="2082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- positiveReverseTest -->
       </class> <!-- reverse_geocoding_tests.ReverseGeocodingTests -->
-    </test> <!-- ReverseGeocoding Tests -->
-  </suite> <!-- ReverseGeocodingTestSuite -->
+      <class name="geocoding_tests.GeocodingTests">
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:13 PDT" name="setUP" finished-at="2020-08-29T23:34:14 PDT" duration-ms="663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6111ba37]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:13 PDT" name="setUP" finished-at="2020-08-29T23:34:14 PDT" duration-ms="654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6111ba37]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="negativeInvalidKeyParametersGeocodingTest(java.util.Map)[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:14 PDT" name="negativeInvalidKeyParametersGeocodingTest" data-provider="csvReader" finished-at="2020-08-29T23:34:16 PDT" duration-ms="1967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{error_message_path=error_message, no=1, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=You must use an API key to authenticate each request to Google Maps Platform APIs. For additional information, please refer to http://g.co/dev/maps-no-account, description=missing key test, status_path=status, key=, statusCode=200, status=REQUEST_DENIED}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeInvalidKeyParametersGeocodingTest -->
+        <test-method signature="positiveTest()[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:14 PDT" name="positiveTest" finished-at="2020-08-29T23:34:16 PDT" duration-ms="2015" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveTest -->
+        <test-method is-config="true" signature="setUP(org.testng.ITestContext)[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:16 PDT" name="setUP" finished-at="2020-08-29T23:34:16 PDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6111ba37]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method signature="negativeInvalidKeyParametersGeocodingTest(java.util.Map)[pri:0, instance:geocoding_tests.GeocodingTests@3cc1435c]" started-at="2020-08-29T23:34:16 PDT" name="negativeInvalidKeyParametersGeocodingTest" data-provider="csvReader" finished-at="2020-08-29T23:34:16 PDT" duration-ms="306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{error_message_path=error_message, no=2, address=1600 Amphitheatre Parkway Mountain View CA, errorMessage=The provided API key is invalid., description=invalid key test, status_path=status, key=5o3ClJEaUAprrk2H-3tQY8vkXbC0, statusCode=200, status=REQUEST_DENIED}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeInvalidKeyParametersGeocodingTest -->
+      </class> <!-- geocoding_tests.GeocodingTests -->
+    </test> <!-- Smoke Tests -->
+  </suite> <!-- SmokeTestSuite -->
 </testng-results>

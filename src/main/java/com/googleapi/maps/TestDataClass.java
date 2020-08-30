@@ -15,6 +15,8 @@ public class TestDataClass {
 	private String expectedErrorMessage;
 	private String key;
 	private String latlng;
+	private String status_path;
+	private String error_message_path;
 
 	public TestDataClass(Map<String, String> testData) {
 		testNumber = getMapValue(testData, "no");
@@ -26,6 +28,8 @@ public class TestDataClass {
 		expectedErrorMessage = getMapValue(testData,"errorMessage");
 		key = getMapValue(testData,"key");
 		latlng = getMapValue(testData,"latlng");
+		status_path = getMapValue(testData,"status_path");
+		error_message_path = getMapValue(testData,"error_message_path");
 	}
 	
 	private String getMapValue(Map<String, String> testData, String key) {
@@ -106,6 +110,22 @@ public class TestDataClass {
 
 	public void setLatlng(String latlng) {
 		this.latlng = latlng;
+	}
+
+	public String getStatus_path() {
+		return status_path;
+	}
+
+	public void setStatus_path(String status_path) {
+		this.status_path = status_path;
+	}
+
+	public String getError_message_path() {
+		return error_message_path;
+	}
+
+	public void setError_message_path(String error_message_path) {
+		this.error_message_path = error_message_path;
 	}
 	
 	
